@@ -1,0 +1,33 @@
+void bubbleSort(int niz[], int n)
+{
+	int i, j;
+	for (i = 0; i < n - 1; i++)
+		for (j = 0; j < n - i - 1; j++)
+			if (niz[j] > niz[j + 1])
+				swap(niz[j], niz[j + 1]);
+				
+}
+
+
+void main() {
+
+	int niz[10];
+	
+	cout << "Unesite 10 brojeva za niz: ";
+	for (int i = 0; i < 10; i++)
+	{
+		cin >> niz[i];
+	}
+	for (int i = 0; i < 10; i++)
+	{
+		cout << niz[i]<<endl;
+	}
+	cout << endl;
+	bubbleSort(niz,10);
+	for (int i = 0; i < 10; i++)
+	{
+		cout << niz[i] << ",";
+	}
+
+	system("PAUSE>0");
+}
