@@ -1,0 +1,33 @@
+int SumaIntervala(int a,int b) {
+	int sumaParnih = 0;
+	if (a < b) {
+		for (int i = a; i < b; i++)
+		{
+			if (i % 2 == 0) {
+				sumaParnih += i;
+			}
+		}
+	}
+	else if (b < a) {
+		for (int i = b; i < a; i++)
+		{
+			if (i % 2 == 0) {
+				sumaParnih += i;
+			}
+		}
+	}
+	return sumaParnih;
+}
+
+void main() {
+
+	int a, b;
+	cout << "Unesite interval a:";
+	cin >> a;
+	cout << "Unesite interval b:";
+	cin >> b;
+
+	cout << "Suma intervala a i b je:" << SumaIntervala(a, b);
+
+	system("PAUSE>0");
+}
